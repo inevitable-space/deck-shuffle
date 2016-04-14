@@ -1,0 +1,14 @@
+# Local configurations files #
+/gradle.properties
+
+# Build files #
+build/
+.idea/
+.gradle/
+out/
+
+# Package Files #
+*.jar
+*.war
+/.config
+*.ear
