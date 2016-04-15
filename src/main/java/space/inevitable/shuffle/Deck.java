@@ -3,28 +3,22 @@ package space.inevitable.shuffle;
 import java.util.List;
 
 public class Deck {
-    private int size = 52;
     final private List<Card> cards;
 
     public Deck() {
-        CardsBuilder cardsBuilder = new CardsBuilder();
+        final CardsBuilder cardsBuilder = new CardsBuilder();
         cards = cardsBuilder.build();
     }
 
     public int getSize() {
-        return size;
+        return cards.size();
     }
 
     public Card dealCard() {
-        size--;
-
-        final Card card = cards.get(0);
-        cards.remove(0);
-
-        return card;
+        return cards.remove(0);
     }
 
-    public Card getCardAt(int index) {
+    public Card getCardAt(final int index) {
         return cards.get(index);
     }
 }

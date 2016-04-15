@@ -16,19 +16,19 @@ public class CardsBuilder {
     }
 
     private void iterInSuitEnum() {
-        for(Suit suit :Suit.values()){
+        for(final Suit suit :Suit.values()){
             iterateInRankEnum(suit);
         }
     }
 
-    private void iterateInRankEnum(Suit suit) {
-        for(Rank rank : Rank.values()){
-            Card card = buildCard(rank, suit);
+    private void iterateInRankEnum(final Suit suit) {
+        for(final Rank rank : Rank.values()){
+            final Card card = buildCard(rank, suit);
             cards.add(card);
         }
     }
 
-    private Card buildCard(Rank rank, Suit suit) {
+    private Card buildCard(final Rank rank, final Suit suit) {
         return new Card(rank, suit);
     }
 }

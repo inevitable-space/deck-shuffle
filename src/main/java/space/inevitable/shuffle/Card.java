@@ -1,12 +1,13 @@
 package space.inevitable.shuffle;
 
+
 public class Card {
     final private Rank rank;
     private final Suit suit;
 
-    public Card(final Rank rank, Suit diamonds) {
+    public Card(final Rank rank, final Suit suit) {
         this.rank = rank;
-        this.suit = diamonds;
+        this.suit = suit;
     }
 
     public Rank getRank() {
