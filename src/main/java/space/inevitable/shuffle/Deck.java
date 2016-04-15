@@ -1,6 +1,5 @@
 package space.inevitable.shuffle;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Deck {
@@ -23,5 +22,9 @@ public class Deck {
         cards.remove(0);
 
         return card;
+    }
+
+    public Card getCardAt(int index) {
+        return cards.get(index);
     }
 }

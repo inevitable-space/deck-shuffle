@@ -67,4 +67,22 @@ class DeckTest extends Specification {
         card2.getRank() == Rank.TWO
         card3.getRank() == Rank.THREE
     }
+
+    def "the card 52 of the deck should be K-DIAMONDS"(){
+        when:
+        Card lastCard  = deck.getCardAt(51)
+
+        then:
+        lastCard.getRank() == Rank.K
+        lastCard.getSuit() == Suit.DIAMONDS
+    }
+
+    def "the card 52 of the deck should be Q-DIAMONDS"(){
+        when:
+        Card lastCard  = deck.getCardAt(50)
+
+        then:
+        lastCard.getRank() == Rank.Q
+        lastCard.getSuit() == Suit.DIAMONDS
+    }
 }

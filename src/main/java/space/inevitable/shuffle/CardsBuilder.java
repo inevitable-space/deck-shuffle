@@ -11,18 +11,24 @@ public class CardsBuilder {
     }
 
     public List<Card> build() {
-        iterateInRankEnum();
+        iterInSuitEnum();
         return cards;
     }
 
-    private void iterateInRankEnum() {
+    private void iterInSuitEnum() {
+        for(Suit suit :Suit.values()){
+            iterateInRankEnum(suit);
+        }
+    }
+
+    private void iterateInRankEnum(Suit suit) {
         for(Rank rank : Rank.values()){
-            Card card = buildCard(rank);
+            Card card = buildCard(rank, suit);
             cards.add(card);
         }
     }
 
-    private Card buildCard(Rank rank) {
-        return new Card(rank);
+    private Card buildCard(Rank rank, Suit suit) {
+        return new Card(rank, suit);
     }
 }

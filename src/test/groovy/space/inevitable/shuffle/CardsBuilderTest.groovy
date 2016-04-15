@@ -11,10 +11,10 @@ class CardsBuilderTest extends Specification {
         cards = cardsBuilder.build()
     }
 
-    def "build should create 13 cards"(){
+    def "build should create 52 cards"(){
         //expect is used when there is no when related to the test
         expect:
-        cards.size() == 13
+        cards.size() == 52
     }
 
     def "build should create 13 cards where the first one rank should be A"(){
